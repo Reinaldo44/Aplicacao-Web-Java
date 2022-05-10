@@ -28,9 +28,8 @@ public class EventoController {
 
     @RequestMapping( value="/cadastrarEvento", method=RequestMethod.POST)
     public String formEnviar(Evento evento){
-
+        
         er.save(evento);
-       
         return "redirect:/cadastrarEvento";
     }
     
