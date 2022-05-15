@@ -9,23 +9,27 @@
     <title>Detalhes do evento</title>
 </head>
 <body>
+
 <div class="container">
 <div class="col-6">
     
-   <ul th:each="evento : ${evento}" class="list-group">
+    <ul th:each="evento : ${evento}" class="list-group">
 
         <li class="list-group-item active">Detalhes do evento</li>
 
         <li class="list-group-item"><p>Nome: <span th:text="${evento.nome}"></span></p></li>
         <li class="list-group-item"><p>Local: <span th:text="${evento.local}"></span></p></li>
         <li class="list-group-item"><p>Data: <span th:text="${evento.data}"></span></p></li>
-        <li class="list-group-item"> <p>Horario: <span th:text="${evento.horario}"></span></p></li>  
-      </ul> 
+        <li class="list-group-item"> <p>Horario: <span th:text="${evento.horario}"></span></p></li> 
+         
+    </ul> 
 
 </div>
 
+
+
 <div class="col-6">
-  <p></p>
+  <th:block th:include="mensagemValidacao"></th:block>
   <p><h4>Adicionar convidados ao evento</h4></p>
 
   <form method="post">

@@ -3,7 +3,7 @@ package com.eventos.eventos.Models;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class Evento implements Serializable{
@@ -11,13 +11,14 @@ public class Evento implements Serializable{
 	private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    
 	private long codigo;
-	@NotBlank
+	@NotEmpty
 	private String nome;
-	@NotBlank
+	@NotEmpty
 	private String local;
+	@NotEmpty
 	private String data;
+	@NotEmpty
 	private String horario;
     
 	@OneToMany

@@ -7,14 +7,13 @@ import javax.validation.constraints.*;
 public class Convidado {
 
     @Id
-    @NotBlank
+    @NotEmpty
     private String rg;
 
     @NotEmpty
     private String nomeConvidado;
 
     @ManyToOne
-   
     private Evento evento;
 
     public String getRg() {
