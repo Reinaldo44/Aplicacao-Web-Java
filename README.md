@@ -1,2 +1,2 @@
 # Aplicacao-Web-Java
-Projeto desenvolvido com Spring 
+Projeto desenvolvido com Spring de cadastro de eventos
